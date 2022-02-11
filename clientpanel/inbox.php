@@ -1,72 +1,51 @@
 
- <?php include 'headerclient.php'; ?>
-
+ <?php include 'headerclient.php';
+  include 'sidebar.php';
+ 
+ ?>
 
  <style> 
-*{margin: 0; padding: 0;}
-.inbox-grid-container {margin: auto; max-width: 90%; display: grid; grid-template-columns: 350px auto; grid-gap: 20px; }  
+.inbox-wrap {width: 75%;  margin : 150px auto auto 300px; height: 800px; right: o; }
 
-.left-side-bar {border: 1px solid;}
+.inbox-content { width: 100%; background : gray; border-bottom: 0.5px solid; }
 
-
-
-
-
-.right-container {border: 1px solid;}
-.all-job {text-decoration: none;}
-.job-show {width: auto; background-color: red; height : 30px;   }
-.job-show ul li {text-decoration : none; display: inline; margin: 5px; }
-
+.inbox-content ul li {text-decoration: none; display: inline-block; margin: 10px; font-size: 20px;}
+.link {text-decoration: none;}
 
 </style>
 
-
-<div class="inbox-grid-container">  <!--- Start grid container -->
-
-<div class= "left-side-bar">  <!--- Start left side bar -->
+<div class="inbox-wrap"> 
     
 
+<a href ="jobview.php" class="link"> <div class="inbox-content"> 
+
+<ul> <li style="width: 25%;"> Logo Design for my company </li>
+<li style="width: 50%;"> I want to a brander logo for my company this is .......... </li>
+<li style="width: 15%;"> 10 Janurary 2022 </li>
 
 
 
-</div> <!--- End left side bar -->
+</ul> 
+
+
+</div> </a>
+
+
+<a href ="jobview.php" class="link"> <div class="inbox-content"> 
+
+<ul> <li style="width: 25%; background : green; "> Title </li>
+<li style="width: 50%; background : green;"> kdshfk kjddhfkd ksdjfhkf dkjdfhkdf .......... </li>
+<li style="width: 15%; background : green; text-align: center;"> 10 Janurary 2022 </li>
 
 
 
-<div class="right-container"> <!--- Start Right Container  -->
+</ul> 
+
+
+</div> </a>
 
 
 
-<!--- Start job show div  --> <a href ="#" class= "all-job"> <div class="job-show">  
-    
+</div>
 
-<ul> 
-    <li style="width : 300px;"> Job Title </li>
-    <li> Job details </li>
-    <li> Time & Date </li>
-
-
-</ul>
-
-
-
-
-
-
-
-
-</div> </a>  <!--- End job show div  -->
-    
-
-
-
-</div> <!--- End Rig Container  -->
-
-
-
-
-
-
-
-
-</div> <!--- End grid container -->
+<div class="clear"> </div>

@@ -6,8 +6,10 @@
     <title>workhouse</title>
 <style> 
 *{margin: 0; padding: 0;}
-header {top:0;  position: sticky; width: 100%; height: auto; border-bottom: 0.1px solid; z-index: 1; background-color: white;}
-.header-grid-container {margin: 20px auto; max-width: 90%; height: auto; display: grid; grid-template-columns: 20% auto 20%; grid-gap:20px;} 
+header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px solid; 
+    z-index: 1; background-color: white;}
+.header-grid-container {margin: 20px auto; max-width: 90%; height: auto; 
+    display: grid; grid-template-columns: 20% auto 20%; grid-gap:20px;} 
 
 
 .logo-section {width: 100%; }
@@ -16,13 +18,13 @@ header {top:0;  position: sticky; width: 100%; height: auto; border-bottom: 0.1p
 
 
 .search-section {width: 100%;  margin: auto; position: relative; }
-.search-btn { color: white; text-align: center; width: 10%; height: 50px; background-color: green; z-index: 1; position: absolute; border: none; outline: none; font-size: 25px;}
-.src-input { margin-left : 10%; font-size: 18px; width: 89%; padding-left: 10px; height : 50px;  border: none; outline: none;  background:#F1F2F2; }
+.search-btn {color: white; text-align: center; width: 100px; height: 50px; background-color: green; z-index: 1; position: absolute; border: none; outline: none; font-size: 25px;}
+.src-input { margin-left : 100px; font-size: 18px; width: 600px; padding-left: 10px; height : 50px;  border: none; outline: none;  background:#F1F2F2; }
 
 
 
 .login-register {width: 100%; margin: auto;  }
-.post-job-form {width: 80%; height: 50px; border: 1px solid; float: left; position: relative; }
+.post-job-form {width: 180px; height: 50px; border: 1px solid; float: left; position: relative; }
 .post-job-form a {display: block; text-align: center; position: absolute; top: 25%;}
 
 .prf-pic {width: 50px; height: 50px; border: 1px solid; float: right; }
@@ -89,7 +91,7 @@ header {top:0;  position: sticky; width: 100%; height: auto; border-bottom: 0.1p
 <div class="navigation"> 
     <div class="nav">
             <ul> 
-            <li> Inbox</li>
+            <li> <a href="inbox.php">  Inbox </a></li>
                 <li> My Works</li>
                 <li> Massages</li>
                 <li> Notification</li>
