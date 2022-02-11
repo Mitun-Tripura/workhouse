@@ -1,5 +1,8 @@
 
-
+ <?php include 'headerclient.php';
+  include 'sidebar.php';
+ 
+ ?>
 
 
 
@@ -19,7 +22,10 @@
 
 <style> 
  *{margin: 0; padding: 0;}
-.form-container {margin: 20px auto auto auto; border: 1px solid; max-width: 50%; height: auto;} 
+
+
+.post-job-wrap { width: 75%; margin : 160px auto auto 300px; height: 800px; }
+.form-container {margin: 20px auto auto auto; border: 1px solid; max-width: 100%; height: auto;} 
 
 .form-details {margin : 20px;}
 input {width: 100%; height: 30px;}
@@ -34,6 +40,9 @@ input {width: 100%; height: 30px;}
 
 
 <body>
+
+
+<div class="post-job-wrap"> 
 
 <div class="form-container"> <!--- Form container Start -->
 
@@ -104,7 +113,7 @@ input {width: 100%; height: 30px;}
 
 </div> <!--- Form container End -->
 
-
+</div>
 
 </body>
 </html>

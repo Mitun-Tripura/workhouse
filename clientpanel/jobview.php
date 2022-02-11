@@ -5,24 +5,51 @@
  ?>
 
  <style> 
-.job-view-wrap {position: relative; width: 75%; background : gray; margin : auto auto auto 300px; height: 800px; margin-top: 150px;}
+ *{margin: 0; padding: 0;}
+.job-view-wrap {position: relative; width: 75%; margin : auto auto auto 300px; height: 800px; margin-top: 150px;}
 
 
-*{margin: 0; padding: 0;}
-.form-container {margin: 20px auto auto auto; border: 1px solid; max-width: 100%; height: auto;  bottom: 0; 
-    position: fixed; } 
 
-.form-details {margin : 20px;}
+.form-container { width: 75%; height: auto;  bottom: 0; 
+    position: fixed;  } 
+
+
 input {width: 100%; height: 30px;}
 
-.input-box {margin : 20px auto 20px auto;}
+
 .input-box span {font-size: 20px;}
-.text-box {width: 100%; }
+.text-box {width: 100%; height : 100px;  }
+
+.submit-content {width : 100%;  height: 40px;}
+.btn {width : 150px; height : 40px;}
 
 
 </style>
 
 <div class="job-view-wrap"> 
+
+
+<div class="form-tag-input" > 
+       <span class = "error"> Title</span> </br>
+       <i class="fa fa-user from-icon"> </i> 
+        <input  class="input-field" name="clientname" type="text" placeholder="Enter your user name" >
+        
+        </div>  
+
+
+        <div class="form-tag-input" > 
+       <span class = "error"> Title</span> </br>
+       <i class="fa fa-user from-icon"> </i> 
+        <input  class="input-field" name="clientname" type="text" placeholder="Enter your user name" >
+        
+        </div>
+
+
+        
+
+
+        
+
     
 
 <div class="form-container"> <!--- Form container Start -->
@@ -34,7 +61,7 @@ input {width: 100%; height: 30px;}
       
 
         <div class="input-box"> 
-            <span class="#"> Description </span>
+           
             <textarea name="description" class="text-box" cols="30" rows="10"> </textarea>
 
         </div>
@@ -44,12 +71,13 @@ input {width: 100%; height: 30px;}
        
 
 
-        <div class="input-box"> 
-            <span class="#"> Attachment (optional) </span>
-            <input type="file" placeholder="Enter your Text..." required>
+     <div class="submit-content"> 
+        <button class="btn" type="submit"> Send </button>
+        <button class="btn" type="File"> Attached </button>
+         <button class="btn" type="reset"> Reset </button>
+           
 
-            <button type="submit"> Submit </button>
-    <button type="reset"> Reset </button>
+        
 
         </div>
 

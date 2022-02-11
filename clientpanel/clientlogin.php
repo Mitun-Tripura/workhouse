@@ -1,5 +1,9 @@
 
-<?php include '../lib/database.php'; ?>
+<?php include '../lib/database.php'; 
+session_start ();
+?>
+
+ 
 
 <?php 
 
@@ -18,6 +22,7 @@ $rowcount = mysqli_num_rows($result);
 
 if($rowcount == true) {
 
+    $_SESSION ["clientname"]=$clientname;
     header ("location:inbox.php");
 
 } else {

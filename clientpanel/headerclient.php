@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,7 @@ header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px
 .logo-section {width: 100%; }
 .logo{color: green;}
 
-
+.clear {clear: both;}
 
 .search-section {width: 100%;  margin: auto; position: relative; }
 .search-btn {color: white; text-align: center; width: 100px; height: 50px; background-color: green; z-index: 1; position: absolute; border: none; outline: none; font-size: 25px;}
@@ -27,7 +31,38 @@ header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px
 .post-job-form {width: 180px; height: 50px; border: 1px solid; float: left; position: relative; }
 .post-job-form a {display: block; text-align: center; position: absolute; top: 25%;}
 
-.prf-pic {width: 50px; height: 50px; border: 1px solid; float: right; }
+.prf-pic {width: 50px; height: 50px; border: 1px solid; float: left; }
+
+
+.box {width: 20%; float: right; }
+
+#profile-pic { box-shadow: 0 0 3px -1px; margin-top: 10px; width: 50px;
+height: 50px; border-radius: 50px; background-image: url(images/image1.jpg); }
+
+#box1 {background-color:transparent; position:fixed;  top:0; left:0;  right:0;
+    bottom:0; display:block;}
+
+
+
+.profile-box { display: none; box-shadow: 0 0 3px -1px; 
+width : 250px;  height:200px; background : #FFFFFF;  margin-top: 70px;
+position: absolute;}
+        
+        
+.profile-box:before { content: ''; width: 20px; height: 20px; background:#FFFFFF; position: absolute;
+transform: translatey(-40%) rotate(45deg); margin-left: 150px; 
+box-shadow: -2px -2px 3px -2px; }
+.profile-box ul {padding-top: 20px; padding-left: 20px; list-style-type: none;}
+
+.profile-nav li {margin-bottom : 30px;}
+.porfile-icon {margin-right: 20px;}
+.profile-nav ul li i span {margin-bottom : 30px;}
+
+
+
+
+
+
 
 
 
@@ -40,6 +75,25 @@ header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px
 
 
 </style>    
+
+
+<?php 
+include '../lib/database.php';
+ session_start (); 
+ if($_SESSION["clientname"]== true) {
+     
+ }else {
+
+    header ("location: ../index.php");
+ }
+
+ ?>
+
+
+
+
+
+
 </head>
 <body>
     <header>
@@ -78,9 +132,75 @@ header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px
     <div class="log-reg"> 
         <div class="post-job-form"> <a href="postjob.php"> Post A Job </a> </div>
         
-       <div class="prf-pic"> </div>
+      
+
+       
+       <div class="box"> 
+							<div id="box1"> </div>     
+       <div id="profile-pic" > </div>
+							</div>
+  
+					<div id="profile-box" class="profile-box">
+						
+                
+            <ul class="profile-nav">
+												
+													
+<li> <i class="fa fa-user porfile-icon"> </i> <?php echo $_SESSION ["clientname"];?> </li>
+
+<li> <i class="fa fa-cog porfile-icon"> </i>  Seetings </li>
+<li> <i class="fa fa-sign-out-alt porfile-icon"> </i>
+                
+                <a href="clientlogout.php"> Logout </a> </li>
+                             
+            </ul>
+												
+     </div>
+  
+    
+
+
+
+
+
+ 
+<div class="clear"> </div>
+
+
+
+
+
+                
+
+
+
+
+       </div>
+
+ <script>
+window.onload = function(){
+	var popup = document.getElementById('profile-box');
+    var overlay = document.getElementById('box1');
+    var openButton = document.getElementById('profile-pic');
+    document.onclick = function(e){
+        if(e.target.id == 'box1'){
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        if(e.target === openButton){
+         	popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    };
+};
+
+</script>
+
+
 
     </div>
+
+
     
     </div> <!--- login register end -->
 

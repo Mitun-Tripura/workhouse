@@ -2,6 +2,7 @@
 <?php include '../lib/database.php'; ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -159,6 +160,7 @@ if(empty ($_POST['agree'])) {
         VALUES ('$clientname', '$clientemail', '$password', '$confirmpass', '$stateaddress', 
         '$postalcode', '$country', '$gender' )";
         $result2 = mysqli_query ($conn, $sql2); 
+       $_SESSION ["clientname"]=$clientname;
         header ("location: inbox.php");
 
 
