@@ -1,12 +1,12 @@
 
 <?php include '../lib/database.php'; 
-session_start ();
+
 ?>
 
  
 
 <?php 
-
+session_start ();
 $clientemailErr = $passwordErr = "";
 
 
@@ -22,7 +22,7 @@ $rowcount = mysqli_num_rows($result);
 
 if($rowcount == true) {
 
-    $_SESSION ["clientname"]=$clientname;
+    $_SESSION ["clientemail"]=$clientemail;
     header ("location:inbox.php");
 
 } else {
@@ -107,7 +107,7 @@ footer {overflow: hidden; bottom: 0; position: absolute; background-color: light
 
     <div class="section">
         <div class="registration-form"> <h2>LOG IN</h2></div>
-    <form class="form-tag">
+    <form method="post" class="form-tag">
 
 
         <div class="form-tag-input" > 

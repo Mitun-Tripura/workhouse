@@ -10,7 +10,7 @@
 <style> 
 *{margin: 0; padding: 0;}
 
-.sidebar {width : 20%; background : red; height: 100%; left : 0; position : fixed;  }
+.sidebar {width : 20%; background : red; height: 100%; left : 0; position : fixed; absolute; top: 160px;  }
 
 .sidebar-content {margin: 20px; }
 

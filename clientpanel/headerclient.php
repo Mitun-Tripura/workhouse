@@ -10,7 +10,7 @@
     <title>workhouse</title>
 <style> 
 *{margin: 0; padding: 0;}
-header {top:0;  position: fixed; width: 100%; height: auto; border-bottom: 0.1px solid; 
+header {top:0;  position: fixed; width: 100%; height: 160px; border-bottom: 0.1px solid; 
     z-index: 1; background-color: white;}
 .header-grid-container {margin: 20px auto; max-width: 90%; height: auto; 
     display: grid; grid-template-columns: 20% auto 20%; grid-gap:20px;} 
@@ -74,24 +74,20 @@ box-shadow: -2px -2px 3px -2px; }
 
 
 
-</style>    
-
-
+</style>
 <?php 
-include '../lib/database.php';
+
  session_start (); 
- if($_SESSION["clientname"]== true) {
+ if($_SESSION["clientemail"]== true) {
+
+   
      
  }else {
 
-    header ("location: ../index.php");
+    header ('location: ../index.php');
  }
 
  ?>
-
-
-
-
 
 
 </head>
@@ -146,7 +142,7 @@ include '../lib/database.php';
             <ul class="profile-nav">
 												
 													
-<li> <i class="fa fa-user porfile-icon"> </i> <?php echo $_SESSION ["clientname"];?> </li>
+<li> <i class="fa fa-user porfile-icon"> </i><?php echo $_SESSION ["clientemail"]; ?></li>
 
 <li> <i class="fa fa-cog porfile-icon"> </i>  Seetings </li>
 <li> <i class="fa fa-sign-out-alt porfile-icon"> </i>

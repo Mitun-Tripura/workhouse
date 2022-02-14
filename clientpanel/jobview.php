@@ -6,7 +6,7 @@
 
  <style> 
  *{margin: 0; padding: 0;}
-.job-view-wrap {position: relative; width: 75%; margin : auto auto auto 300px; height: 800px; margin-top: 150px;}
+ .job-view-wrap { width: 75%; left: 22%; top : 160px; height: 800px; position: relative; }
 
 
 

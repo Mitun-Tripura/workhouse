@@ -24,7 +24,7 @@
  *{margin: 0; padding: 0;}
 
 
-.post-job-wrap { width: 75%; margin : 160px auto auto 300px; height: 800px; }
+.post-job-wrap { width: 75%; left: 22%; top : 160px; height: 800px; position: relative; }
 .form-container {margin: 20px auto auto auto; border: 1px solid; max-width: 100%; height: auto;} 
 
 .form-details {margin : 20px;}
@@ -52,13 +52,13 @@ input {width: 100%; height: 30px;}
 
       <div class="input-box"> 
             <span class="#"> Job Type </span>
-            <input type="text" placeholder="Enter your Text..." required>
+            <input type="text" name="jobtype" placeholder="Enter your Text..." required>
 
         </div>
 
         <div class="input-box"> 
             <span class="#"> Job Title </span>
-            <input type="text" placeholder="Enter your Text..." required>
+            <input type="text" name="jobtitle" placeholder="Enter your Text..." required>
 
         </div>
 
@@ -70,19 +70,19 @@ input {width: 100%; height: 30px;}
 
         <div class="input-box"> 
             <span class="#"> Delivery Time </span>
-            <input type="text" placeholder="Enter your Text..." required>
+            <input type="text" name="dltime" placeholder="Enter your Text..." required>
 
         </div>
 
         <div class="input-box"> 
             <span class="#"> Category </span>
-            <input type="text" placeholder="Enter your Text..." required>
+            <input type="text" name="category" placeholder="Enter your Text..." required>
 
         </div>
     
         <div class="input-box"> 
             <span class="#"> Select Option </span>
-        <select name="" id=""> 
+        <select name="item" id=""> 
             <option value="bangaldesh">   Bangladesh </option>
             <option value="India">   India </option>
             <option value="Pakistan">   Pakistan </option>
@@ -95,7 +95,7 @@ input {width: 100%; height: 30px;}
 
         <div class="input-box"> 
             <span class="#"> Attachment (optional) </span>
-            <input type="file" placeholder="Enter your Text..." required>
+            <input type="file" name="attachment" placeholder="Enter your Text..." required>
 
         </div>
 

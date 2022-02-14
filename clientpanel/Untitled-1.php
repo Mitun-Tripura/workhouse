@@ -26,7 +26,7 @@ include 'sidebar.php';
 
 <style> 
 .clear {clear: both;}
-.inbox-wrap {width: 75%; top: 160px; height: 800px; left: 22%; position: relative; }
+.inbox-wrap {width: 75%;  margin : 160px auto auto 300px; height: 800px; right: o; }
 
 .inbox-content { width: 100%; background : gray; border-bottom: 0.5px solid; }
 
@@ -36,7 +36,19 @@ include 'sidebar.php';
 </style>
 
 
+<?php 
 
+ session_start (); 
+ if($_SESSION["clientname"]== true) {
+
+   echo "welcome"."".$_SESSION ["clientname"];
+     
+ }else {
+
+    header ('location: ../index.php');
+ }
+
+ ?>
 
 
 
@@ -82,19 +94,7 @@ include 'sidebar.php';
 
 <div class="clear"> </div>
 
-<?php 
-
-
-if($_SESSION["clientemail"]== true) {
-
- 
     
-}else {
-
-   header ('location: ../index.php');
-}
-
-?>
 </body>
 </html>
 
