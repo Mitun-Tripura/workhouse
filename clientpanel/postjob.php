@@ -44,58 +44,54 @@ $jobtype = $jobtitle = $description = $dltime = $category = $item = $attachment 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $jobtype = mysqli_real_escape_string ($_POST['jobtype']);
-    $jobtitle = mysqli_real_escape_string ($_POST['jobtitle']);
-    $description = mysqli_real_escape_string ($_POST['description']);
-    $dltime = mysqli_real_escape_string ($_POST['dltime']);
-    $category = mysqli_real_escape_string ($_POST['category']);
-    $item = mysqli_real_escape_string ($_POST['item']);
-    $attachment = mysqli_real_escape_string ($_POST['attachment']);
+    
 
-    if(empty($jobtype)){
+    if (empty($_POST ['jobtype'])) {$jobtypeeErr = "Name is required"; 
+    } else {$jobtype = $_POST['jobtype'];}
 
-        $jobtypeErr = "Name is required"; 
+    if (empty($_POST ['jobtitle'])) {$jobtitleErr = "Email is required";
+    } else {$jobtitle = $_POST['jbotitle'];}
 
-     }
-    if(empty($jobtitle)){
+    if (empty($_POST ['description'])) {$descriptionErr = "Email is required";
+    } else {$description = $_POST['description'];}
 
-        $jobtitleeErr = "Name is required"; 
+    if (empty($_POST ['dltime'])) {$dltimeErr = "Email is required";
+    } else {$dltime = $_POST['dltime'];}
 
-    }
-    if(empty($description)){
+    if (empty($_POST ['category'])) {$categoryErr = "Email is required";
+    } else {$category = $_POST['category'];}
 
-        $descriptionErr = "Name is required"; 
+    if (empty($_POST ['item'])) {$itemErr = "Email is required";
+    } else {$item = $_POST['item'];}
 
-    }
-    if(empty($dltime)){
-
-        $dltimeErr = "Name is required"; 
-
-    }
-    if(empty($category)){
-
-        $categoryErr = "Name is required"; 
-
-    }
-
-    if(empty($itme)){
-
-        $itemErr = "Name is required"; 
-
-    }
-    if(empty($attachment)){
-
-        $attachmentErr = "Name is required"; 
-
-    }else {
-
-        $sql3 = "INSERT INTO client_jobpost (jobtype, jobtitle, description,  dltime, 
-        category, item, attachment) 
+    if (empty($_POST ['attachment'])) {$attachmentErr = "Email is required";
+    } else {$attachment = $_POST['attachment'];
+    
+            $sql3 = "INSERT INTO client_jobpost(jobtype, jobtitle, description,  dltime, 
+            category, item, attachment) 
            VALUES ('$jobtype', '$jobtitle', '$description', '$dltime', '$category', 
            '$item', '$attachment')";
            $result3 = mysqli_query ($conn, $sql3); 
-
+           header ("location: inbox.php");
+    
     }
+
+
+
+
+
+     
+
+
+
+
+
+
+ 
+    
+
+}
+   
 
 
    
@@ -104,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
    
 
-}
+
 
 
 
